@@ -5,7 +5,8 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {path: '/', Component: HomeComponent},
-  {path: 'search/:searchTerm', component: HomeComponent}
+  {path: 'search/:searchTerm', component: HomeComponent},
+  {path: 'tag/:tag', component: HomeComponent}
 ];
 
 @NgModule({
