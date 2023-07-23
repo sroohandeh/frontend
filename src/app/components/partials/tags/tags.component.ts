@@ -12,6 +12,9 @@ export class TagsComponent implements OnInit {
   tags?:Tags[]
 
   constructor(foodService: FoodService){
-    this.tags = FoodService.getAllTags()
+    this.tags = foodService.getAllTags()
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 }
