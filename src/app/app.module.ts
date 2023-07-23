@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { SearchComponent } from './components/partials/search/search.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
+import { DetailsComponent } from './components/pages/details/details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TagsComponent } from './components/partials/tags/tags.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    TagsComponent
+    TagsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

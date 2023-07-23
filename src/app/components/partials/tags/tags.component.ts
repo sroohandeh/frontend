@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { FoodService } from 'src/app/services/food.service';
 import { Tags } from 'src/app/shared/models/Tags';
@@ -9,12 +9,17 @@ import { Tags } from 'src/app/shared/models/Tags';
   styleUrls: ['./tags.component.scss']
 })
 export class TagsComponent implements OnInit {
-  tags?:Tags[]
+  @Input()
+  foodPageTags?:string[];
 
-  constructor(foodService: FoodService){
-    this.tags = foodService.getAllTags()
-  }
+  @Input()
+  justifyContent:string = 'center';
+
+  tags?:Tags[];
+  constructor(private foodService:FoodService) { }
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    if(!this.foodPageTags)
+     this.tags = this.foodService.getAllTags();
   }
 }
