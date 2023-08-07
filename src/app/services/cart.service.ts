@@ -1,3 +1,4 @@
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Cart } from '../shared/models/Cart';
 import { CartItem } from '../shared/models/CartItem';
 import { Food } from '../shared/models/Food';
@@ -21,12 +22,12 @@ export class CartService {
    
   }
 
-  removeFromCart(foodId : string): void{
+  removeFromCart(foodId : number): void{
     this.cart.items = this.cart.items
     .filter(item => item.food.id != foodId);
   }
 
-  changeQuantity(foodId: string, quantity: number) {
+  changeQuantity(foodId: number, quantity: number) {
     let cartItem = this.cart.items
       .find(item => item.food.id === foodId);
     if (!cartItem) return;

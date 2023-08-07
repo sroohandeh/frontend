@@ -13,10 +13,13 @@ export class CartPageComponent implements OnInit {
   cart!: Cart;
 
   constructor(private cartService: CartService){
-    this.cartService.getCartObservable().subscribe((cart) =>
+    this.cartService.getCartObservable().subscribe((cart: Cart) =>
     {
       this.cart = cart;
     } )
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   removeFromCart(cartItem : CartItem){
