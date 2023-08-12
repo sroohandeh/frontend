@@ -12,6 +12,7 @@ import { DetailsComponent } from './components/pages/details/details.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
 import { NotFoundComponent } from './components/partials/not-found/not-found.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StarRatingModule  
+    StarRatingModule,
+    HttpClientModule
+      
   ],
   schemas: [
     NO_ERRORS_SCHEMA
