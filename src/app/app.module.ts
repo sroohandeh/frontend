@@ -17,6 +17,8 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgxSummernoteModule } from 'ngx-summernote';
+
 
 @NgModule({
   declarations: [
@@ -38,13 +40,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     StarRatingModule,
     HttpClientModule,
     ReactiveFormsModule, 
+    NgxSummernoteModule,
     ToastrModule,
     ToastrModule.forRoot({      
         timeOut : 3000,
         positionClass: 'toast-bottom-position',
         newestOnTop : false,
       }
-    )   
+    ),    
       
   ],
   schemas: [

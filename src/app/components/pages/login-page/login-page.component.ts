@@ -16,7 +16,7 @@ export class LoginPageComponent {
   
   constructor(private formBuilder: FormBuilder,    
      private activatedRoute:ActivatedRoute,
-     private router:Router, private userService: UserService, private avtivatedRoute: ActivatedRoute) { }
+     private router:Router, private userService: UserService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -24,7 +24,7 @@ export class LoginPageComponent {
       password:['', Validators.required]
     });
 
-    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
+    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;  
     
   }
 
